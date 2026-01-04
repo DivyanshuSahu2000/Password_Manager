@@ -110,10 +110,10 @@ const Manager = () => {
           <span>PassWor</span>
           <span className="text-green-700">ld/&gt;</span>
         </h1>
-        <p className="text-green-900 text-lg text-center ">
+        <p className="text-green-900 text-lg text-center dark:text-zinc-200 ">
           Your Password Manager
         </p>
-        <div className="  flex flex-col p-4 text-black gap-5 items-center">
+        <div className="  flex flex-col p-4 text-black dark:text-amber-50 gap-5 items-center">
           <input
             onChange={handleChange}
             value={form.site}
@@ -177,12 +177,12 @@ const Manager = () => {
           {passwordArray.length === 0 && <div> No passwords to show</div>}
           {passwordArray.length != 0 && (
             <>
-              <div className="mobile  md:hidden">
-                <table className=" gap-1 flex flex-col table-auto border-collapse border border-gray-300 w-full md:hidden">
+              <div className="mobile dark:text-amber-50 md:hidden">
+                <table className=" gap-1 flex flex-col table-auto border-collapse  w-full md:hidden">
                   {passwordArray.map((item, index) => (
-                    <tbody key={index}>
+                    <tbody key={index} className="dark:text-amber-50">
                       <tr>
-                        <th className="bg-green-500 text-white px-4 py-2 border border-gray-300 text-left">
+                        <th className="bg-green-500 text-white dark:text-amber-50 px-4 py-2 border border-gray-300 text-left">
                           Site
                         </th>
                         <td className="py-2 px-1 border border-white text-center align-top">
@@ -214,7 +214,7 @@ const Manager = () => {
                         <th className="bg-green-500 text-white px-4 py-2 border border-gray-300 text-left">
                           Username
                         </th>
-                        <td className="py-2 px-1 border border-white text-center align-top">
+                        <td className="py-2 px-1 dark:text-amber-50 border border-white text-center align-top">
                           <div className="flex items-center justify-between w-full break-all">
                             <span>{item.username}</span>
                             <div
@@ -301,7 +301,7 @@ const Manager = () => {
               </div>
               {/* reponsiveTable above 768px */}
               <table className=" pc-sec table-auto w-full rounded-md overflow-hidden mb-10 hidden md:table">
-                <thead className="bg-green-800 text-white">
+                <thead className="bg-green-800  text-white">
                   <tr>
                     <th className="py-2">Site</th>
                     <th className="py-2">Username</th>
@@ -309,7 +309,7 @@ const Manager = () => {
                     <th className="py-2">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="bg-green-100">
+                <tbody className="bg-green-100 dark:text-zinc-800">
                   {passwordArray.map((item, index) => {
                     return (
                       <tr key={index}>

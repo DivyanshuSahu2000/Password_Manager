@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-slate-800 text-white flex flex-col justify-center items-center   w-full">
-      <div className="logo font-bold text-white text-2xl">
+    <div className="dark:bg-slate-800 bg-green-100 dark:text-white text-zinc-800 flex flex-col justify-center items-center   w-full">
+      <div className="logo font-bold dark:text-white text-zinc-800 text-2xl">
         <span className="text-green-500"> &lt;</span>
 
         <span>PassWor</span>
@@ -16,7 +16,7 @@ const Footer = () => {
           src="icons/heart.png"
           alt=""
         />{" "}
-        by CodeWithHarry{" "}
+        by Divyanshu Sahu{" "}
       </div>
     </div>
   );
